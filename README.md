@@ -1,4 +1,4 @@
-# 📦 Smart Inventory Pallet – Embedded System for Inventory Automation
+# Smart Inventory Pallet – Embedded System for Inventory Automation
 
 An embedded IoT solution to automate vehicle loading and unloading operations in beverage distribution warehouses. This system uses **ESP32**, **load cells**, and **cloud-based SaaS integration** to **eliminate manual stock entry** and update inventory in real-time.
 
