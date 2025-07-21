@@ -83,7 +83,16 @@ This manual process:
 📁 Firmware Path: `firmware/esp32-loadcell.ino`
 
 ---
+---
 
+## 📅 Project Timeline – 12 Weeks
+
+| Week | Milestone                                      | Description                                                                 |
+|------|------------------------------------------------|-----------------------------------------------------------------------------|
+| 1    | 🔍 **Requirement Analysis & Planning**         | Finalize features, hardware list, and system architecture. Set up GitHub repo. |
+| 2    | 🧠 **Research & Design**                       | Study ESP32 + HX711 + load cell integration. Finalize API structure.       |
+
+---
 ## 🌐 SaaS Integration
 
 With existing SaaS platform should expose a **REST API** or **MQTT broker**.
@@ -97,10 +106,3 @@ With existing SaaS platform should expose a **REST API** or **MQTT broker**.
   "event": "load",
   "delta_weight": 60.0
 }
-
-## 📅 Project Timeline – 12 Weeks
-
-| Week | Milestone                                      | Description                                                                 |
-|------|------------------------------------------------|-----------------------------------------------------------------------------|
-| 1    | 🔍 **Requirement Analysis & Planning**         | Finalize features, hardware list, and system architecture. Set up GitHub repo. |
-| 2    | 🧠 **Research & Design**                       | Study ESP32 + HX711 + load cell integration. Finalize API structure.       |
