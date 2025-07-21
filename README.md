@@ -91,6 +91,7 @@ This manual process:
 |------|------------------------------------------------|-----------------------------------------------------------------------------|
 | 1    | 🔍 **Requirement Analysis & Planning**         | Finalize features, hardware list, and system architecture. Set up GitHub repo. |
 | 2    | 🧠 **Research & Design**                       | Study ESP32 + HX711 + load cell integration. Finalize API structure.       |
+| 3    | 🧪 **Prototype Circuit Build**                 | Connect ESP32, HX711, and load cell on breadboard. Begin firmware development. |
 
 ---
 ## 🌐 SaaS Integration
