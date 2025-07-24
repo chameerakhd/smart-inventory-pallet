@@ -4,7 +4,7 @@ An embedded IoT solution to automate vehicle loading and unloading operations in
 
 ---
 
-## 📌 Problem Statement
+## Problem Statement
 
 In beverage distribution agencies, warehouse clerks manually record:
 - Stock **loaded** into delivery vehicles
@@ -17,7 +17,7 @@ This manual process:
 
 ---
 
-## 🎯 Project Objective
+## Project Objective
 
 > Replace manual stock tracking with **Smart Inventory Pallets** that:
 > - Detect loading/unloading based on **weight change**
@@ -26,16 +26,16 @@ This manual process:
 
 ---
 
-## 🧠 System Overview
+## System Overview
 
-### 🔹 Components
+### Components
 
 - **Load Cell** to detect weight changes on pallet
 - **HX711** to amplify analog signal from load cell
 - **ESP32** to read data and transmit to cloud via Wi-Fi
 - **SaaS Platform** to receive, process, and report inventory data
 
-### 📊 System Architecture
+### System Architecture
 
 ![System Architecture](docs/system-architecture.png)
 
@@ -48,7 +48,7 @@ This manual process:
 
 ---
 
-## 🔌 Hardware Setup
+## Hardware Setup
 
 | Component              | Description                             |
 |------------------------|-----------------------------------------|
@@ -58,7 +58,7 @@ This manual process:
 | **Power Supply**       | Battery/USB power for ESP32             |
 | **Wooden/Plastic Pallet** | Holds crates during loading/unloading |
 
-### 🧱 Hardware Wiring Diagram
+### Hardware Wiring Diagram
 
 ![Hardware Setup](docs/hardware-setup.png)
 
@@ -68,9 +68,9 @@ This manual process:
 
 ---
 
-## ⚙️ Firmware
+## Firmware
 
-### ✅ Features
+### Features
 
 - Read live weight using HX711
 - Detect **loading/unloading events**
@@ -84,7 +84,7 @@ This manual process:
 ---
 ---
 
-## 📅 Project Timeline – 12 Weeks
+## Project Timeline – 12 Weeks
 
 | Week | Milestone                                      | Description                                                                 |
 |------|------------------------------------------------|-----------------------------------------------------------------------------|
@@ -95,11 +95,11 @@ This manual process:
 | 5    | **API Integration**                         | Send data from ESP32 to mock SaaS API using HTTP POST (or MQTT).           |
 
 ---
-## 🌐 SaaS Integration
+## SaaS Integration
 
 With existing SaaS platform should expose a **REST API** or **MQTT broker**.
 
-### 📥 Sample API Payload
+### Sample API Payload
 
 ```json
 {
