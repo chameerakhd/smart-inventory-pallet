@@ -52,7 +52,7 @@ This manual process:
 
 | Component              | Description                             |
 |------------------------|-----------------------------------------|
-| **Load Cell**          | Measures weight (50kg–200kg)            |
+| **Load Cell**          | Measures weight (5kg–20kg)            |
 | **HX711 Amplifier**    | Converts analog signal to digital       |
 | **ESP32 Dev Board**    | Microcontroller with Wi-Fi              |
 | **Power Supply**       | Battery/USB power for ESP32             |
@@ -80,7 +80,6 @@ This manual process:
   - `delta_weight`
   - `event` type (`load` or `unload`)
 
-📁 Firmware Path: `firmware/esp32-loadcell.ino`
 
 ---
 ---
@@ -89,9 +88,11 @@ This manual process:
 
 | Week | Milestone                                      | Description                                                                 |
 |------|------------------------------------------------|-----------------------------------------------------------------------------|
-| 1    | 🔍 **Requirement Analysis & Planning**         | Finalize features, hardware list, and system architecture. Set up GitHub repo. |
-| 2    | 🧠 **Research & Design**                       | Study ESP32 + HX711 + load cell integration. Finalize API structure.       |
-| 3    | 🧪 **Prototype Circuit Build**                 | Connect ESP32, HX711, and load cell on breadboard. Begin firmware development. |
+| 1    | **Requirement Analysis & Planning**         | Finalize features, hardware list, and system architecture. Set up GitHub repo. |
+| 2    | **Research & Design**                       | Study ESP32 + HX711 + load cell integration. Finalize API structure.       |
+| 3    | **Prototype Circuit Build**                 | Connect ESP32, HX711, and load cell on breadboard. Begin firmware development. |
+| 4    | **Firmware Development I**                  | Implement weight reading, filtering, and Δweight detection logic.          |
+| 5    | **API Integration**                         | Send data from ESP32 to mock SaaS API using HTTP POST (or MQTT).           |
 
 ---
 ## 🌐 SaaS Integration
