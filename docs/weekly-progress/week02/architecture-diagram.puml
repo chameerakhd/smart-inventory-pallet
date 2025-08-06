@@ -1,0 +1,170 @@
+@startuml Simplified_Smart_Inventory_Palette
+!theme aws-orange
+title Simplified Smart Inventory Palette System Architecture
+
+' Define colors
+!define EDGE #E8F4FD
+!define COMM #FFF2CC
+!define CLOUD #E1F5FE
+!define SECURITY #FFEBEE
+
+' ============================================================================
+' EDGE LAYER - Smart Palette Hardware
+' ============================================================================
+package "Smart Palette (Edge Device)" as edge <<EDGE>> {
+    
+    ' Core Components
+    component "ESP32\n(Main Controller)" as esp32
+    component "20kg Load Cell\n+ HX711 ADC" as weight_sensor
+    component "RC522 NFC Reader\n+ Vehicle Cards" as nfc_system
+    component "OLED Display\n+ Status LEDs\n+ Buzzer" as ui_components
+    component "MicroSD Card\n(Local Storage)" as storage
+    component "Power Management\n(12V Input)" as power
+    
+    ' Connections
+    weight_sensor --> esp32
+    nfc_system --> esp32
+    ui_components --> esp32
+    storage --> esp32
+    power --> esp32
+    
+    note right of esp32
+        **Key Functions:**
+        • Weight monitoring
+        • NFC authentication
+        • Local data logging
+        • Wi-Fi communication
+        • Real-time processing
+    end note
+}
+
+' ============================================================================
+' COMMUNICATION LAYER
+' ============================================================================
+package "Network Infrastructure" as network <<COMM>> {
+    component "Warehouse Wi-Fi\n(WPA3)" as wifi
+    component "Router/Firewall\n+ VPN" as router
+    component "Internet\n(Fiber/4G Backup)" as internet
+    
+    wifi --> router
+    router --> internet
+}
+
+' ============================================================================
+' CLOUD LAYER - SAAS Platform
+' ============================================================================
+package "Cloud SAAS Platform" as cloud <<CLOUD>> {
+    
+    ' API Layer
+    component "API Gateway\n+ Load Balancer" as api_layer
+    
+    ' Core Services
+    package "Microservices" {
+        component "Device\nManagement" as device_svc
+        component "Inventory\nProcessing" as inventory_svc
+        component "Vehicle\nManagement" as vehicle_svc
+        component "Analytics &\nReporting" as analytics_svc
+    }
+    
+    ' Messaging & Data
+    component "Message Broker\n(Kafka/RabbitMQ)" as message_queue
+    
+    package "Data Storage" {
+        database "PostgreSQL\n(Primary DB)" as primary_db
+        database "InfluxDB\n(Time-Series)" as timeseries_db
+        database "Redis\n(Cache)" as cache_db
+    }
+    
+    ' Client Applications
+    component "Web Dashboard\n(Management)" as web_app
+    component "Mobile App\n(Monitoring)" as mobile_app
+    component "Reporting\nEngine" as reports
+    
+    ' Cloud connections
+    api_layer --> device_svc
+    api_layer --> inventory_svc
+    api_layer --> vehicle_svc
+    api_layer --> analytics_svc
+    
+    device_svc --> message_queue
+    inventory_svc --> message_queue
+    vehicle_svc --> message_queue
+    
+    message_queue --> primary_db
+    message_queue --> timeseries_db
+    analytics_svc --> timeseries_db
+    primary_db --> cache_db
+    
+    web_app --> api_layer
+    mobile_app --> api_layer
+    reports --> primary_db
+}
+
+' ============================================================================
+' SECURITY LAYER
+' ============================================================================
+package "Security & Compliance" as security <<SECURITY>> {
+    component "Identity Provider\n(Auth/OAuth)" as auth
+    component "SSL Certificates\n(Auto-renewal)" as ssl
+    component "Encryption\n(AES-256)" as encryption
+    component "Audit Logs\n(ELK Stack)" as audit
+}
+
+' ============================================================================
+' USERS
+' ============================================================================
+actor "Warehouse\nManager" as manager
+actor "Delivery\nDriver" as driver
+actor "System\nAdmin" as admin
+
+' ============================================================================
+' MAIN CONNECTIONS
+' ============================================================================
+
+' Edge to Network
+esp32 -.-> wifi : "Wi-Fi\n(HTTPS/JSON)"
+
+' Network to Cloud
+internet --> api_layer : "TLS 1.3\n(REST API)"
+
+' Security Integration
+auth --> api_layer : "JWT\nValidation"
+ssl --> api_layer : "Certificate\nManagement"
+encryption --> primary_db : "Data\nEncryption"
+audit <--> cloud : "Security\nEvents"
+
+' User Interactions
+manager --> web_app : "Management\nConsole"
+driver -.-> nfc_system : "Card Tap\n(Vehicle ID)"
+admin --> mobile_app : "System\nMonitoring"
+
+' ============================================================================
+' SYSTEM FLOW
+' ============================================================================
+note as flow
+    **Data Flow:**
+    1. Weight change detected → NFC card tapped
+    2. ESP32 processes transaction locally
+    3. Data sent to cloud via Wi-Fi
+    4. Inventory updated in real-time
+    5. Alerts/reports generated automatically
+end note
+
+note top of edge
+    **Edge Features:**
+    • Real-time weight monitoring (±10g)
+    • Offline capability with local storage
+    • Multi-vehicle NFC support
+    • Self-diagnostics & OTA updates
+end note
+
+note top of cloud
+    **Cloud Features:**
+    • Multi-tenant SAAS architecture
+    • Auto-scaling & 99.9% uptime
+    • Real-time inventory sync
+    • Advanced analytics & ML
+    • Role-based access control
+end note
+
+@enduml
