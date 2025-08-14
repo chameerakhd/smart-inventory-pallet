@@ -63,7 +63,7 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 
 ### Deliverables
 - [System architecture diagrams](../docs/architecture-diagram.pdf)
-- Data flow diagrams
+- [Data flow diagrams](../docs/data-flow-diagram.pdf)
 - Updated project scope with NFC integration
 - Technology stack documentation
 
