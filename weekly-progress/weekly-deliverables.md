@@ -3,7 +3,7 @@
 **12-Week Project Timeline – ESP32 Load Cell + NFC Vehicle Identification + SaaS Integration**
 
 ## Overview
-This document outlines the comprehensive 12-week development timeline for the Smart Inventory Pallet system, an embedded project that automates beverage warehouse inventory management using load cells, NFC vehicle identification, and cloud integration.
+This document outlines the comprehensive 12-week development timeline for the Smart Inventory Pallet system, an embedded project that automates beverage warehouse inventory management using ESP32, load cells, NFC vehicle identification, and cloud integration.
 
 ---
 
@@ -19,10 +19,9 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 - [ ] Create **GitHub repository** and set up base documentation (README, LICENSE, initial commit)
 
 ### Deliverables
-- Project proposal document
+- [Project proposal document](docs/project-proposal.pdf)
 - Initial presentation slides
 - GitHub repository setup
-- Project scope definition
 
 ---
 
@@ -45,7 +44,6 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 ### Deliverables
 - Requirements specification document
 - Work breakdown structure
-- Testing strategy document
 - GitHub Projects setup with Gantt chart
 
 ---
@@ -66,7 +64,6 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 ### Deliverables
 - System architecture diagrams
 - Data flow diagrams
-- GPIO pin mapping document
 - Updated project scope with NFC integration
 - Technology stack documentation
 
@@ -88,7 +85,6 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 - Component selection report
 - Wiring diagrams
 - Component order list
-- Hardware test plan
 
 ---
 
@@ -127,140 +123,14 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 - [ ] Link vehicle IDs with **test database** on SaaS platform
 - [ ] Test multiple vehicle tags for recognition
 
-### Deliverables
-- NFC reader integration
-- Vehicle identification firmware
-- Test database setup
-- Multiple vehicle tag testing results
 
----
 
-## **Week 7 – Combined Hardware Functionality**
-### Objectives
-- Integrate all hardware components
-- Create unified system operation
 
-### Tasks
-- [ ] Integrate load cell & NFC logic into single firmware
-- [ ] Ensure:
-   - [ ] Weight reading happens after vehicle identification
-   - [ ] Data from both sensors displays on screen
-- [ ] Prepare **demo video** for milestone review
 
-### Deliverables
-- Integrated firmware system
-- Combined hardware demonstration
-- Milestone demo video
-- System operation documentation
 
----
 
-## **Week 8 – SaaS Cloud Integration (Phase 2)**
-### Objectives
-- Establish cloud connectivity
-- Implement data transmission
 
-### Tasks
-- [ ] Connect ESP32 to Wi-Fi
-- [ ] Send data to SaaS cloud via REST API / MQTT:
-   - [ ] Vehicle ID
-   - [ ] Measured weight  
-   - [ ] Timestamp
-- [ ] Create SaaS dashboard to view logs
-- [ ] Test with local & online databases
 
-### Deliverables
-- Wi-Fi connectivity implementation
-- Cloud data transmission system
-- Basic SaaS dashboard
-- Database integration testing
-
----
-
-## **Week 9 – Cloud Features Enhancement**
-### Objectives
-- Enhance cloud platform capabilities
-- Improve user experience
-
-### Tasks
-- [ ] Implement **user authentication** for SaaS dashboard
-- [ ] Add data filtering (by date, vehicle, weight range)
-- [ ] Implement CSV/Excel export functionality
-- [ ] Begin performance optimization of cloud API
-
-### Deliverables
-- Enhanced SaaS dashboard
-- User authentication system
-- Data export functionality
-- Performance optimization report
-
----
-
-## **Week 10 – Testing & Optimization**
-### Objectives
-- Comprehensive system testing
-- Performance optimization
-
-### Tasks
-- [ ] Test entire workflow:
-   1. [ ] Scan NFC tag
-   2. [ ] Measure vehicle weight
-   3. [ ] Send to cloud
-   4. [ ] View on dashboard
-- [ ] Optimize sensor read intervals
-- [ ] Improve UI on ESP32 display (layout, fonts)
-- [ ] Fix latency or network issues
-
-### Deliverables
-- Complete system test results
-- Performance optimization improvements
-- UI enhancements
-- Network issue resolution
-
----
-
-## **Week 11 – Documentation & Deployment**
-### Objectives
-- Complete comprehensive documentation
-- Deploy production system
-
-### Tasks
-- [ ] Complete **GitHub Wiki**:
-   - [ ] Setup guide
-   - [ ] Wiring diagrams
-   - [ ] API documentation
-   - [ ] Troubleshooting guide
-- [ ] Deploy SaaS system on production server
-- [ ] Test with real environment (actual vehicle weighing)
-
-### Deliverables
-- Complete project documentation
-- Production deployment
-- Real-world testing results
-- User manuals and guides
-
----
-
-## **Week 12 – Final Presentation & Submission**
-### Objectives
-- Present final project
-- Complete project submission
-
-### Tasks
-- [ ] Prepare **final report**
-- [ ] Create final **demo video**
-- [ ] Deliver **live demonstration** to panel
-- [ ] Submit all project files to batch GitHub organization
-- [ ] Wrap-up retrospective: lessons learned & future improvements
-
-### Deliverables
-- Final project report
-- Demonstration video
-- Live presentation
-- Project submission
-- Retrospective analysis
-
----
 
 ## Project Phases Summary
 
@@ -312,11 +182,11 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 ```
 smart-inventory-pallet/
 ├── README.md
-├── PROJECT_TIMELINE.md
+├── weekly-progress
 ├── docs/
-│   ├── architecture/
-│   ├── hardware/
-│   └── api/
+│   ├── architecture-diagram
+│   ├── gantt.md
+│   └── 
 ├── firmware/
 │   ├── src/
 │   └── libraries/
