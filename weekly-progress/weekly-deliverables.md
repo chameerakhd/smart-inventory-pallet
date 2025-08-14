@@ -19,9 +19,9 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 - [ ] Create **GitHub repository** and set up base documentation (README, LICENSE, initial commit)
 
 ### Deliverables
-- [Project proposal document](docs/project-proposal.pdf)
-- Initial presentation slides
-- GitHub repository setup
+- [Project proposal document](../docs/project-proposal.pdf)
+- [Initial presentation slides](../docs/smart-inventory-pallet-presentation.pdf)
+- [GitHub repository setup](../README.md)
 
 ---
 
@@ -44,7 +44,7 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 ### Deliverables
 - Requirements specification document
 - Work breakdown structure
-- GitHub Projects setup with Gantt chart
+- [GitHub Projects setup with Gantt chart](../docs/gantt.md)
 
 ---
 
@@ -62,7 +62,7 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 - [ ] Update architecture diagrams to include NFC components
 
 ### Deliverables
-- System architecture diagrams
+- [System architecture diagrams](../docs/architecture-diagram.pdf)
 - Data flow diagrams
 - Updated project scope with NFC integration
 - Technology stack documentation
@@ -83,7 +83,7 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 
 ### Deliverables
 - Component selection report
-- Wiring diagrams
+- [Wiring diagrams](../docs/hardware-setup.png)
 - Component order list
 
 ---
@@ -105,7 +105,7 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 ### Deliverables
 - Working load cell measurement system
 - Calibration procedures
-- Basic firmware code
+- [Basic firmware code](../smar-inventory-pallete-phase-1/)
 - Documentation in GitHub Wiki
 
 ---

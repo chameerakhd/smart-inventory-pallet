@@ -215,8 +215,8 @@ void initializeScale() {
         Serial.println("Check connections:");
         Serial.printf("- HX711 VCC -> ESP32 3V3\n");
         Serial.printf("- HX711 GND -> ESP32 GND\n");
-        Serial.printf("- HX711 DT  -> ESP32 D4 (GPIO %d)\n", HX711_DOUT_PIN);
-        Serial.printf("- HX711 SCK -> ESP32 D5 (GPIO %d)\n", HX711_SCK_PIN);
+        Serial.printf("- HX711 DT  -> ESP32 D2 (GPIO %d)\n", HX711_DOUT_PIN);
+        Serial.printf("- HX711 SCK -> ESP32 D4 (GPIO %d)\n", HX711_SCK_PIN);
         Serial.println("- Load cell properly connected to HX711");
         
         display.println("HX711: ERROR!");
