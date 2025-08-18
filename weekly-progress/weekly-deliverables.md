@@ -111,7 +111,25 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 
 ---
 
-## **Week 6 – NFC Integration**
+## **Week 6 – API Integration with SaaS Platform**
+### Objectives
+- Integrate pallet system with existing SaaS platform
+- Implement CRUD operations for weight events
+
+### Tasks
+- [ ] Fork existing SaaS repository into project repo
+- [ ] Modify/extend SaaS REST API endpoints to accept ESP32 weight/NFC data
+- [ ] Write ESP32 firmware to send POST/PUT requests with:
+   - [ ] pallet_id
+   - [ ] timestamp
+   - [ ] delta_weight
+- [ ] Test API with local mock server
+
+### Deliverables
+- [Forked SaaS code with updated API](../SAAS/)
+
+
+## **Week 7 – NFC Integration**
 ### Objectives
 - Integrate NFC vehicle identification system
 - Test multi-vehicle recognition
@@ -121,8 +139,7 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 - [ ] Write code to:
    - [ ] Read NFC card/tag UID
    - [ ] Display vehicle ID on screen
-- [ ] Link vehicle IDs with **test database** on SaaS platform
-- [ ] Test multiple vehicle tags for recognition
+- [ ] Link vehicle IDs with SaaS platform database
 
 
 
