@@ -42,7 +42,7 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 - [ ] Create a **Gantt chart** in GitHub Projects
 
 ### Deliverables
-- Requirements specification document
+- [Requirements specification document](../docs/requirements-specification-v1.pdf)
 - Work breakdown structure
 - [GitHub Projects setup with Gantt chart](../docs/gantt.md)
 
@@ -73,18 +73,19 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 ### Objectives
 - Research and select optimal hardware components
 - Plan prototype implementation
+- add NFC integration for vehicle idenfication
 
 ### Tasks
 - [ ] Research **NFC module compatibility** with ESP32 (e.g., PN532, RC522)
 - [ ] Research load cell amplifier alternatives (HX711 vs ADS1232)
 - [ ] Create **prototype wiring diagram** (Fritzing or similar)
 - [ ] Order remaining components (NFC module, jumper wires, breadboard, power supply)
-- [ ] Prepare test cases for **Phase 1 hardware**
+- [ ] Update requirements specification document
 
 ### Deliverables
-- Component selection report
-- [Wiring diagrams](../docs/hardware-setup.png)
-- Component order list
+- [Hardware Setup Phase 1](../docs/hardware-setup.png)
+- [Wiring diagrams](../docs/wiring-diagram.png)
+- [Requirements specification document v2](../docs/requirements-specification-v2.pdf)
 
 ---
 
