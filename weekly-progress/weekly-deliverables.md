@@ -62,8 +62,8 @@ This document outlines the comprehensive 12-week development timeline for the Sm
 - [ ] Update architecture diagrams to include NFC components
 
 ### Deliverables
-- [System architecture diagrams](../docs/architecture-diagram.pdf)
-- [Data flow diagrams](../docs/data-flow-diagram.pdf)
+- [System architecture diagrams](../docs/architecture-diagram.png)
+- [Data flow diagrams](../docs/data-flow-diagram.png)
 - Updated project scope with NFC integration
 - Technology stack documentation
 
