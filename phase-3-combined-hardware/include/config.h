@@ -60,7 +60,7 @@
 // ============================================================================
 // Measurement Configuration
 // ============================================================================
-#define BOTTLE_WEIGHT 0.65           // Weight of one bottle in kg (650g)
+#define BOTTLE_WEIGHT 1           // Weight of one bottle in kg (650g)
 #define MIN_WEIGHT_THRESHOLD 0.1     // Minimum weight to consider (100g)
 #define MAX_WEIGHT 20.0              // Maximum total weight (20kg)
 #define STABILITY_THRESHOLD 0.05     // Weight stability threshold (50g)
